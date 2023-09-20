@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link href="src/style.css" rel="stylesheet" type="text/css" />
     <link
@@ -16,25 +15,35 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <h1>Vienna</h1>
-        <ul>
-          <li>Wednesday 11:48</li>
-          <li>clear</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear" />
-            23 ℃ | ℉
-          </div>
-          <div class="col-6">
+      <div class="wrapper-app">
+        <div class="weather-app">
+          <div class="app-overview">
+            <h1>Vienna</h1>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity:55%</li>
-              <li>Wind: 11 km/h</li>
+              <li>Wednesday 11:48</li>
+              <li>clear</li>
             </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+                    alt="Clear"
+                    is="icon" />
+                  <div>
+                    <strong id="temperature"></strong
+                    ><span class="unit"><strong>23</strong><span class="units">℃ |<a href="#">℉ </a></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Precipitation: 0%</li>
+                  <li>Humidity:55%</li>
+                  <li>Wind: 11 km/h</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <small>
