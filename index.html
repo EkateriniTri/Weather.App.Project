@@ -10,6 +10,7 @@
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous" />
+      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>World Weather</title>
   </head>
@@ -18,10 +19,10 @@
       <div class="wrapper-app">
         <div class="weather-app">
           <div class="app-overview">
-            <h1>Vienna</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Wednesday 11:48</li>
-              <li>clear</li>
+              <li id="description"></li>
             </ul>
             <div class="row">
               <div class="col-6">
@@ -32,7 +33,7 @@
                     is="icon" />
                   <div>
                     <strong id="temperature"></strong
-                    ><span class="unit"><strong>23</strong><span class="units">℃ |<a href="#">℉ </a></span>
+                    ><span class="unit"><strong id="temperature"></strong><span class="units">℃ |<a href="#">℉ </a></span>
                   </div>
                 </div>
               </div>
