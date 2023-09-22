@@ -31,20 +31,13 @@ function formatDay(timestamp) {
 }
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
   let feels_likeElement = document.querySelector("#feel");
-  feels_likeElement.innerHTML = Math.round(response.data.main.feels_like);
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
-  dateElement.innerHTML = formatDate(currentTime);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -53,6 +46,14 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(currentTime);
+  feels_likeElement.innerHTML = Math.round(response.data.main.feels_like);
 }
 
 function search(city) {
@@ -67,20 +68,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Vienna");

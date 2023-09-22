@@ -17,52 +17,54 @@
   <body>
     <div class="container">
       <div class="wrapper-app">
-        <div class="weather-app">
-          <form id="search-form" class="mb-3">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="Type a city..."
-                  autofocus="on"
-                  autocomplete="off"
-                  class="form-control"
-                  id="city-input" />
+        <div id="box-color">
+          <div class="weather-app">
+            <form id="search-form" class="mb-3">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Type a city..."
+                    autofocus="on"
+                    autocomplete="off"
+                    class="form-control"
+                    id="city-input" />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="search"
+                    class="btn btn-primary shadow sm w-100"
+                    id="searchCityButton" />
+                </div>
               </div>
-              <div class="col-3">
-                <input
-                  type="submit"
-                  value="search"
-                  class="btn btn-primary shadow sm w-100"
-                  id="searchCityButton" />
-              </div>
+            </form>
+            <div class="app-overview">
+              <h1 id="city"></h1>
+              <ul>
+                <li>Last updated on: <span id="date"></span></li>
+                <li id="description"></li>
+              </ul>
             </div>
-          </form>
-          <div class="app-overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated on: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
             <div class="row">
               <div class="col-6">
                 <div class="d-flex weather-temperature">
                   <img src="" alt="Clear" id="icon" class="float-left" />
                   <div class="float-left">
                     <strong id="temperature"></strong>
-                    <span class="unit">°C</span>                    
+                    <span class="units">°C</span>
                   </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <ul>
-                  <li>Feels like: <span id="feel"></span> ℃</li>
-                  <li>Humidity: <span id="humidity"></span> %</li>
-                  <li>Wind: <span id="wind"></span> km/h</li>
-                </ul>
               </div>
             </div>
+            <div class="col-6">
+              <ul>
+                <li>Real Feel: <span id="feel"></span> ℃</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
           </div>
+        </div>
         <small>
           <a
             href="https://github.com/EkateriniTri/Weather.App.Project"

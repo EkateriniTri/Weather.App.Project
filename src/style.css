@@ -1,5 +1,6 @@
 body {
   font-family: arial, sans-serif;
+  background: whitesmoke;
 }
 
 h1 {
@@ -32,11 +33,12 @@ li:first-letter {
 .wrapper-app {
   max-width: 600px;
   margin: 30px auto;
+  background-color: #fff;
 }
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 3px solid lightslategrey;
   border-radius: 5px;
 }
 
@@ -56,4 +58,10 @@ li:first-letter {
   font-size: 64px;
   font-weight: 400;
   line-height: 1;
+}
+
+.weather-temperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -32px;
 }
