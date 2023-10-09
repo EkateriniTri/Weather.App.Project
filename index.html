@@ -17,43 +17,43 @@
   <body>
     <div class="container">
       <div class="wrapper-app">
-        <div id="box-color">
-          <div class="weather-app">
-            <form id="search-form" class="mb-3">
-              <div class="row">
-                <div class="col-9">
-                  <input
-                    type="search"
-                    placeholder="Type a city..."
-                    autofocus="on"
-                    autocomplete="off"
-                    class="form-control"
-                    id="city-input" />
-                </div>
-                <div class="col-3">
-                  <input
-                    type="submit"
-                    value="search"
-                    class="btn btn-primary shadow sm w-100"
-                    id="searchCityButton" />
-                </div>
-              </div>
-            </form>
-            <div class="app-overview">
-              <h1 id="city"></h1>
-              <ul>
-                <li>Last updated on: <span id="date"></span></li>
-                <li id="description"></li>
-              </ul>
-            </div>
+        <div id="box-color"></div>
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-6">
-                <div class="d-flex weather-temperature">
-                  <img src="" alt="Clear" id="icon" class="float-left" />
-                  <div class="float-left">
-                    <strong id="temperature"></strong>
-                    <span class="units">°C</span>
-                  </div>
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  autofocus="on"
+                  autocomplete="off"
+                  class="form-control"
+                  id="city-input" />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="search"
+                  class="btn btn-primary shadow sm w-100"
+                  id="searchCityButton" />
+              </div>
+            </div>
+          </form>
+          <div class="app-overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li>Last updated on: <span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong>
+                  <span class="units">°C</span>
+                </div>
               </div>
             </div>
             <div class="col-6">
@@ -65,6 +65,23 @@
             </div>
           </div>
         </div>
+        <div class="WeatherForecast row">
+          <div class="col">
+            <div class="WeatherForecastPreview">
+              <div class="forecast-day">Mon</div>
+              <img
+                src="https://openweather.org/img/wn/01d@2x.png"
+                alt=""
+                id="icon"
+                class="float-left>"
+                <div
+                class="forecast-temperature" />
+              <span class="forecast-temperature-max"></span>
+              <span class="forecast-temperature-min"></span>
+            </div>
+          </div>
+        </div>
+
         <small>
           <a
             href="https://github.com/EkateriniTri/Weather.App.Project"
@@ -75,6 +92,7 @@
         </small>
       </div>
     </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
