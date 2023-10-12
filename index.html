@@ -42,17 +42,28 @@
           <div class="app-overview">
             <h1 id="city"></h1>
             <ul>
-              <li>Last updated on: <span id="date"></span></li>
+              <li>Last updated on:<span id="date">Thursday 10:35</span></li>
               <li id="description"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
+                <img
+                  src="http://openweathermap.org/img/wn/02d@2x.png"
+                  alt="broken clouds"
+                  id="icon"
+                  class="float-left" />
                 <div class="float-left">
-                  <strong id="temperature"></strong>
-                  <span class="units">°C</span>
+                  <strong id="temperature">24</strong>
+                  <span class="units"
+                    ><a href="#" class="active" id="celsius-link">°C </a>|<a
+                      href="#"
+                      id="fahrenheit-link"
+                      class="">
+                      °F
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -65,23 +76,6 @@
             </div>
           </div>
         </div>
-        <div class="WeatherForecast row">
-          <div class="col">
-            <div class="WeatherForecastPreview">
-              <div class="forecast-day">Mon</div>
-              <img
-                src="https://openweather.org/img/wn/01d@2x.png"
-                alt=""
-                id="icon"
-                class="float-left>"
-                <div
-                class="forecast-temperature" />
-              <span class="forecast-temperature-max"></span>
-              <span class="forecast-temperature-min"></span>
-            </div>
-          </div>
-        </div>
-
         <small>
           <a
             href="https://github.com/EkateriniTri/Weather.App.Project"

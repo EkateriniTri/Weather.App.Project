@@ -65,3 +65,13 @@ li:first-letter {
   font-size: 16px;
   top: -32px;
 }
+
+.weather-temperature .active {
+  color: rgb(135, 135, 135);
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
