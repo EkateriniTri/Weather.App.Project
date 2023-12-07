@@ -3,6 +3,13 @@ body {
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
+p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: blue;
+}
+
 h1 {
   color: #878787;
   font-weight: 100;
@@ -31,13 +38,14 @@ li:first-letter {
 }
 
 .wrapper-app {
-  max-width: 600px;
-  margin: 30px auto;
+  max-width: 500px;
+  margin: 5% auto;
   background-color: #fff;
+  border-radius: 15px;
 }
 
 .weather-app {
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
 }
@@ -74,4 +82,20 @@ li:first-letter {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  p {
+    text-align: center;
+  }
+
+  .weather-app {
+    display: block;
+    text-align: center;
+    margin: 0 20px;
+  }
+  .units {
+    display: flex;
+    padding: 20px;
+  }
 }
